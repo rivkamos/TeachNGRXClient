@@ -1,0 +1,14 @@
+<div>
+    <h1>Students:</h1>
+    <ul>
+        @for(student of students$ | async ;track student.id){
+            <li>{{ student.name }} - {{ student.grade }}</li>
+        }
+    </ul>
+    <!-- @if(error$ | async as error){
+        <div  class="error">
+            Error: {{ error }}
+        </div>
+    } -->
+    <button (click)="addStudent({ id: 1, name: 'John Doe', age: 20, grade: 'A' })">Add Student</button>
+  </div>
